@@ -1,10 +1,26 @@
 var katzDeliLine = [];
 
-function takeANumber (katzDeliLine, name) {
-  katzDeliLine.push(name);
+// katzDeliLine
+// takeANumber [1]
+// takeANumber [1,2]
+// nowServing [2]
+// takeANumber [2,3]
+
+var num = 0;
+
+function takeANumber(katzDeliLine){
+  num = num + 1;
+  katzDeliLine.push(num);
+  return "Welcome. You're number #" + num;
   
-  return ("Welcome, " + name + ". You are number " + katzDeliLine.length + " in line.");
+  // 'Welcome. You're number #'
 }
+
+// function takeANumber (katzDeliLine, name) {
+//   katzDeliLine.push(name);
+  
+//   return ("Welcome, " + name + ". You are number " + katzDeliLine.length + " in line.");
+// }
 
 function nowServing(katzDeliLine) {
   if(katzDeliLine.length === 0) {
